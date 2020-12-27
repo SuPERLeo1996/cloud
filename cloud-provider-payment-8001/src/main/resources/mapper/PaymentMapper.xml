@@ -6,7 +6,7 @@
         insert into payment(serial) values (#{serial})
     </insert>
 
-    <resultMap id="BaseResultMap" type="com.leo.cloud.provider.payment.entity.Payment">
+    <resultMap id="BaseResultMap" type="com.leo.cloud.api.common.entity.Payment">
         <id column="id" property="id" jdbcType="BIGINT"></id>
         <id column="serial" property="serial" jdbcType="VARCHAR"></id>
 

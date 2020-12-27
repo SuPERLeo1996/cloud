@@ -1,4 +1,4 @@
-package com.leo.cloud.provider.payment.entity;
+package com.leo.cloud.api.common.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
