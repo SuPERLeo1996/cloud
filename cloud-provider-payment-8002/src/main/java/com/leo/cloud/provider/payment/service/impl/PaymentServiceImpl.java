@@ -1,7 +1,7 @@
 package com.leo.cloud.provider.payment.service.impl;
 
 import com.leo.cloud.api.common.entity.Payment;
-import com.leo.cloud.provider.payment.dao.PaymentDao;
+import com.leo.cloud.provider.payment.dao.PaymentExtDao;
 import com.leo.cloud.provider.payment.service.PaymentService;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 public class PaymentServiceImpl implements PaymentService {
 
     @Resource
-    private PaymentDao paymentDao;
+    private PaymentExtDao paymentDao;
 
     @Override
     public int create(Payment payment) {

@@ -4,6 +4,7 @@ import com.leo.cloud.api.common.entity.CommonResult;
 import com.leo.cloud.api.common.entity.Payment;
 import com.leo.cloud.provider.payment.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,7 +41,7 @@ public class PaymentController {
         Payment payment = paymentService.getPaymentById(id);
         log.info("-----结果:" + payment);
         if (payment != null) {
-            return new CommonResult(200,"success",payment);
+            return new CommonResult(200,"success,serverPort:" + serverPort,payment);
         } else {
             return new CommonResult(444,"fail",null);
         }
